@@ -1,0 +1,42 @@
+[
+ {
+  "RuleID": "github-pat",
+  "Description": "Uncovered a GitHub Personal Access Token, potentially leading to unauthorized repository access and sensitive content exposure.",
+  "StartLine": 40,
+  "EndLine": 40,
+  "StartColumn": 23,
+  "EndColumn": 62,
+  "Match": "REDACTED",
+  "Secret": "REDACTED",
+  "File": "/code/go.go",
+  "SymlinkFile": "",
+  "Commit": "",
+  "Entropy": 5.071928,
+  "Author": "",
+  "Email": "",
+  "Date": "",
+  "Message": "",
+  "Tags": [],
+  "Fingerprint": "/code/go.go:github-pat:40"
+ },
+ {
+  "RuleID": "github-pat",
+  "Description": "Uncovered a GitHub Personal Access Token, potentially leading to unauthorized repository access and sensitive content exposure.",
+  "StartLine": 25,
+  "EndLine": 25,
+  "StartColumn": 30,
+  "EndColumn": 69,
+  "Match": "REDACTED",
+  "Secret": "REDACTED",
+  "File": "/code/rust.rs",
+  "SymlinkFile": "",
+  "Commit": "",
+  "Entropy": 5.071928,
+  "Author": "",
+  "Email": "",
+  "Date": "",
+  "Message": "",
+  "Tags": [],
+  "Fingerprint": "/code/rust.rs:github-pat:25"
+ }
+]

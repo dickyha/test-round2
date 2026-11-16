@@ -1,0 +1,62 @@
+               
+               
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 3 files tracked by git with 1094 Code rules:
+                                                                                                                        
+  Language      Rules   Files          Origin      Rules                                                                
+ ─────────────────────────────        ───────────────────                                                               
+  <multilang>      47       3          Community    1094                                                                
+  go               85       1                                                                                           
+  rust             11       1                                                                                           
+                                                                                                                        
+                   
+                   
+┌─────────────────┐
+│ 3 Code Findings │
+└─────────────────┘
+               
+    /code/go.go
+    ❯❱ problem-based-packs.insecure-transport.go-stdlib.bypass-tls-verification.bypass-tls-verification
+          ❰❰ Blocking ❱❱
+          Checks for disabling of TLS/SSL certificate verification. This should only be used for debugging
+          purposes because it leads to vulnerability to MTM attacks.                                      
+          Details: https://sg.run/4xj5                                                                    
+                                                                                                          
+           27┆ TLSClientConfig: &tls.Config{
+           28┆    MinVersion:         tls.VersionTLS13,
+           29┆    InsecureSkipVerify: true,
+           30┆ },
+   
+   ❯❯❱ go.lang.security.audit.dangerous-exec-command.dangerous-exec-command
+          ❰❰ Blocking ❱❱
+          Detected non-static command inside Command. Audit the input to 'exec.Command'. If unverified user  
+          data can reach this call site, this is a code injection vulnerability. A malicious actor can inject
+          a malicious script to execute arbitrary code.                                                      
+          Details: https://sg.run/W8lA                                                                       
+                                                                                                             
+           52┆ return exec.CommandContext(ctx, "sh", "-c", "getent hosts "+hostname).CombinedOutput()
+                 
+    /code/rust.rs
+    ❯❱ rust.lang.security.reqwest-accept-invalid.reqwest-accept-invalid
+          ❰❰ Blocking ❱❱
+          Dangerously accepting invalid TLS information
+          Details: https://sg.run/DqrG                 
+                                                       
+           46┆ reqwest::Client::builder()
+           47┆     .timeout(Duration::from_secs(5))
+           48┆     .danger_accept_invalid_certs(true)
+
+                
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ Scan completed successfully.
+ • Findings: 3 (3 blocking)
+ • Rules run: 142
+ • Targets scanned: 3
+ • Parsed lines: ~100.0%
+ • No ignore information available
+Ran 142 rules on 3 files: 3 findings.

@@ -1,0 +1,224 @@
+{
+  "snapshot_utc": "2026-11-13T11:00:32.346189+00:00",
+  "tool_versions_and_database_info": {
+    "semgrep": "1.185.0",
+    "gitleaks": "v8.30.1",
+    "trivy": "Version: 0.76.2\nVulnerability DB:\n  Version: 2\n  UpdatedAt: 2026-11-13 07:00:07.938173847 +0000 UTC\n  NextUpdate: 2026-11-14 07:00:07.938173677 +0000 UTC\n  DownloadedAt: 2026-11-13 10:28:12.710639052 +0000 UTC\nCheck Bundle:\n  Digest: sha256:b591e9190cff4aa4e385b1a25bccfd9ecf178d3c77fd194e1410b7ce7e1df058\n  DownloadedAt: 2026-11-13 10:29:44.332229959 +0000 UTC",
+    "osv-scanner": "osv-scanner version: 2.7.1\nosv-scalibr version: 0.5.3\ncommit: 02f96a40691c2d155fdda799af436e111231e365\nbuilt at: 2026-11-09T03:39:40Z"
+  },
+  "images": [
+    {
+      "reference": "semgrep/semgrep:1.185.0",
+      "id": "sha256:67518c174185a2043fdbed16c70631b79209499b3671178e7194379b48295a0d",
+      "digests": [
+        "semgrep/semgrep@sha256:67518c174185a2043fdbed16c70631b79209499b3671178e7194379b48295a0d"
+      ]
+    },
+    {
+      "reference": "ghcr.io/gitleaks/gitleaks:v8.30.1",
+      "id": "sha256:c00b6bd0aeb3071cbcb79009cb16a60dd9e0a7c60e2be9ab65d25e6bc8abbb7f",
+      "digests": [
+        "ghcr.io/gitleaks/gitleaks@sha256:c00b6bd0aeb3071cbcb79009cb16a60dd9e0a7c60e2be9ab65d25e6bc8abbb7f"
+      ]
+    },
+    {
+      "reference": "aquasec/trivy:0.76.2",
+      "id": "sha256:8f6bb947dbc528902e11f2f5be52f7b519f6a39d5d148f41166f2040499768fb",
+      "digests": [
+        "aquasec/trivy@sha256:8f6bb947dbc528902e11f2f5be52f7b519f6a39d5d148f41166f2040499768fb"
+      ]
+    },
+    {
+      "reference": "ghcr.io/google/osv-scanner:v2.7.1",
+      "id": "sha256:a70ffffc2bfd33482953e5d6b64c6fcdb30239717a07b0f0d3ab2859ce3e4cde",
+      "digests": [
+        "ghcr.io/google/osv-scanner@sha256:a70ffffc2bfd33482953e5d6b64c6fcdb30239717a07b0f0d3ab2859ce3e4cde"
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "tool": "gitleaks",
+      "scope": "candidate directory, default rules; no Git history or credential validation",
+      "started_at": "2026-11-13T10:55:52.922913+00:00",
+      "finished_at": "2026-11-13T10:55:53.663256+00:00",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--mount",
+        "type=bind,source=D:/sec-interview/candidate,target=/code,readonly",
+        "--mount",
+        "type=bind,source=D:/sec-interview/round-2/raw,target=/reports",
+        "ghcr.io/gitleaks/gitleaks:v8.30.1",
+        "dir",
+        "/code",
+        "--redact=100",
+        "--no-banner",
+        "--no-color",
+        "--report-format",
+        "json",
+        "--report-path",
+        "/reports/gitleaks.json"
+      ],
+      "exit_code": 1
+    },
+    {
+      "tool": "osv-scanner",
+      "scope": "surrounding-service dependency metadata; package/version matching, no build scripts or call analysis",
+      "started_at": "2026-11-13T10:57:13.371065+00:00",
+      "finished_at": "2026-11-13T10:57:16.129626+00:00",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--mount",
+        "type=bind,source=D:/sec-interview/scan-inputs,target=/dependencies,readonly",
+        "--mount",
+        "type=bind,source=D:/sec-interview/round-2/raw,target=/reports",
+        "ghcr.io/google/osv-scanner:v2.7.1",
+        "scan",
+        "source",
+        "--recursive",
+        "--no-call-analysis=go",
+        "--no-call-analysis=rust",
+        "--no-resolve",
+        "--all-packages",
+        "--format",
+        "json",
+        "--output-file",
+        "/reports/osv-scanner.json",
+        "/dependencies"
+      ],
+      "exit_code": 1
+    },
+    {
+      "tool": "semgrep",
+      "scope": "candidate source excerpts only; stock Community rules",
+      "started_at": "2026-11-13T10:55:52.919389+00:00",
+      "finished_at": "2026-11-13T10:55:59.484599+00:00",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--mount",
+        "type=bind,source=D:/sec-interview/candidate,target=/code,readonly",
+        "--mount",
+        "type=bind,source=D:/sec-interview/round-2/raw,target=/reports",
+        "--workdir",
+        "/code",
+        "semgrep/semgrep:1.185.0",
+        "semgrep",
+        "scan",
+        "--oss-only",
+        "--config",
+        "p/default",
+        "--config",
+        "p/security-audit",
+        "--config",
+        "p/rust",
+        "--metrics",
+        "off",
+        "--disable-version-check",
+        "--no-secrets-validation",
+        "--error",
+        "--jobs",
+        "2",
+        "--json-output",
+        "/reports/semgrep.json",
+        "--text-output",
+        "/reports/semgrep.txt",
+        "/code"
+      ],
+      "exit_code": 1
+    },
+    {
+      "tool": "trivy",
+      "scope": "source excerpts for secrets plus surrounding-service dependency metadata; no images or OS packages",
+      "started_at": "2026-11-13T10:57:13.364939+00:00",
+      "finished_at": "2026-11-13T10:57:14.204577+00:00",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--mount",
+        "type=bind,source=D:/sec-interview/candidate,target=/workspace/code,readonly",
+        "--mount",
+        "type=bind,source=D:/sec-interview/scan-inputs,target=/workspace/dependencies,readonly",
+        "--mount",
+        "type=bind,source=D:/sec-interview/round-2/raw,target=/reports",
+        "--mount",
+        "type=volume,source=sec-interview-trivy-cache,target=/root/.cache/trivy",
+        "aquasec/trivy:0.76.2",
+        "filesystem",
+        "--scanners",
+        "vuln,secret",
+        "--skip-db-update",
+        "--exit-code",
+        "1",
+        "--format",
+        "json",
+        "--output",
+        "/reports/trivy.json",
+        "/workspace"
+      ],
+      "exit_code": 1
+    }
+  ],
+  "input_sha256": {
+    "candidate/go.go": "0663c7fabb3f83cef238a00e3a1c18f66c870759a04140e46797e822873a3ea5",
+    "candidate/README.md": "0796f5146cba72559daef00c0ca80097eb79bdb6e73c31c5a51b09de7afb3611",
+    "candidate/rust.rs": "872757d89e75441f883dafe36ff63ca107e9cc7aa3529152dca33e014ec71db0",
+    "scan-inputs/go/go.mod": "d6077780445b58084c97359fa0d4c78d8954d400e660a5d2e2eafff292082530",
+    "scan-inputs/go/go.sum": "afded4ff7076bd5704f0ebc246c6eaa2966bf6266b7992b22eece1904b942c06",
+    "scan-inputs/README.md": "02ea55015d81fffd08c19096729e652c23df65b3599c1792e5921407a91b3d0d",
+    "scan-inputs/rust/Cargo.lock": "806821f01c21a164798713ae505aa401ddcbdbbf974818d002176ba99e6e8dae",
+    "scan-inputs/rust/Cargo.toml": "947b6f8510b41030a9f992188467312a4d87d04621fc314d79132c2fde6b2a6d"
+  },
+  "report_sha256": {
+    "gitleaks.json": "58dfc463d9e068c81f8b210416ef871aa9ee2ee6ffb5ca0d498630f140093819",
+    "gitleaks.log": "36f38252118e16f678f344bfdd6a40fb65b1168823d9cf2f705b0bb8c52c52f8",
+    "osv-scanner.json": "e7209762c0cf40280763ce213c2c564d9dd120ec52611723e6021254810a915d",
+    "osv-scanner.log": "f21578ecd4b790120cff4474f358b985615589e99cda2a40a9faf76523e761c2",
+    "semgrep.json": "7b94a991262bce8b46abe0dcd22e4bd38db9e2524f544c8731b82f500e7c0512",
+    "semgrep.log": "97f7529c35a6853c34bd1cec3356ce6e733b3c79f16cb46435cf1f2b0df4926a",
+    "semgrep.txt": "fdcfa4dfe1df65f77f5409f0ced7efba13e67d2a1337e128b4ea257729ab0edc",
+    "trivy.json": "b3dde57dbf98037fb7bfac7534b65a0fc57a6d27c7f08e77231e327916b26481",
+    "trivy.log": "9707068981cadb4032fd39b22818afe3f5f4b927c675488c4a00772b4a23adef"
+  },
+  "observed_counts": {
+    "semgrep": 3,
+    "gitleaks": 2,
+    "trivy_dependencies": 2,
+    "trivy_secrets": 2,
+    "osv_affected_dependencies": 2,
+    "osv_advisory_records": 3
+  },
+  "notes": [
+    "The excerpts were not executed. No application was built or run.",
+    "Semgrep used stock Community rules only, with metrics and live secret validation disabled. Gitleaks used default directory rules with redaction, not Git history.",
+    "Trivy scanned source secrets and the separate dependency context, not container images or OS packages.",
+    "OSV performed version matching against the dependency context; call analysis, manifest resolution, and build scripts were not enabled.",
+    "All scanner source mounts were read-only. Exit code 1 means findings for these commands.",
+    "No suppression files, custom detection rules, or severity filters were used.",
+    "Dependency advisories concern the surrounding-service metadata, not additional bugs that can be inferred from the two excerpts alone.",
+    "Live rule registries and advisory databases can change future results."
+  ]
+}

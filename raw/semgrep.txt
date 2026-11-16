@@ -1,0 +1,36 @@
+                   
+                   
+┌─────────────────┐
+│ 3 Code Findings │
+└─────────────────┘
+               
+    /code/go.go
+    ❯❱ problem-based-packs.insecure-transport.go-stdlib.bypass-tls-verification.bypass-tls-verification
+          ❰❰ Blocking ❱❱
+          Checks for disabling of TLS/SSL certificate verification. This should only be used for debugging
+          purposes because it leads to vulnerability to MTM attacks.                                      
+          Details: https://sg.run/4xj5                                                                    
+                                                                                                          
+           27┆ TLSClientConfig: &tls.Config{
+           28┆    MinVersion:         tls.VersionTLS13,
+           29┆    InsecureSkipVerify: true,
+           30┆ },
+   
+   ❯❯❱ go.lang.security.audit.dangerous-exec-command.dangerous-exec-command
+          ❰❰ Blocking ❱❱
+          Detected non-static command inside Command. Audit the input to 'exec.Command'. If unverified user  
+          data can reach this call site, this is a code injection vulnerability. A malicious actor can inject
+          a malicious script to execute arbitrary code.                                                      
+          Details: https://sg.run/W8lA                                                                       
+                                                                                                             
+           52┆ return exec.CommandContext(ctx, "sh", "-c", "getent hosts "+hostname).CombinedOutput()
+                 
+    /code/rust.rs
+    ❯❱ rust.lang.security.reqwest-accept-invalid.reqwest-accept-invalid
+          ❰❰ Blocking ❱❱
+          Dangerously accepting invalid TLS information
+          Details: https://sg.run/DqrG                 
+                                                       
+           46┆ reqwest::Client::builder()
+           47┆     .timeout(Duration::from_secs(5))
+           48┆     .danger_accept_invalid_certs(true)
