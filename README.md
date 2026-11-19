@@ -38,8 +38,7 @@ Gitleaks did not assign a severity in this JSON output. No live validation was p
 | --- | --- | --- | --- | --- |
 | `go/go.mod`: `github.com/golang-jwt/jwt/v4` 4.5.1 | HIGH | `CVE-2025-30204` | Excessive memory allocation during JWT header parsing | 4.5.2 |
 | `rust/Cargo.lock`: `jsonwebtoken` 9.3.0 | MEDIUM | `CVE-2026-25537` | Type confusion in JWT claim validation; potential authorization bypass | 10.3.0 |
-| `go.go:40` | CRITICAL | `github-pat` | Personal access token in source | — |
-| `rust.rs:25` | CRITICAL | `github-pat` | Personal access token in source | — |
+
 
 [Original JSON](raw/trivy.json) · [Log](raw/trivy.log)
 
